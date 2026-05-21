@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>JN Advocacia — Escritório de Advocacia em João Pessoa</title>
+
+  <meta name="description" content="Estratégia jurídica com atuação artesanal na defesa de empresas e indivíduos em João Pessoa. Consultoria jurídica clara, próxima e efficiente.">
+
+  <meta property="og:title" content="JN Advocacia — Escritório de Advocacia em João Pessoa">
+  <meta property="og:description" content="Estratégia jurídica com atuação artesanal na defesa de empresas e indivíduos.">
+  <meta property="og:type" content="website">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            adv: {
+              bg: '#FBFBFA',
+              dark: '#0B101D',
+              gold: '#B89452',
+              muted: '#666C7A',
+              border: '#E3E5E8'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: #FBFBFA;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.9s cubic-bezier(0.215, 0.610, 0.355, 1);
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* Custom details reset for clean editorial accordion */
+    details summary::-webkit-details-marker { display: none; }
+    details[open] summary .icon-toggle { transform: rotate(45deg); }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LegalService",
+    "name":"JN Advocacia",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"Av. Amazonas, 290 - Estados",
+      "addressLocality":"João Pessoa",
+      "addressRegion":"PB",
+      "postalCode":"58030-140",
+      "addressCountry":"BR"
+    },
+    "telephone":"+55 83 98708-9929",
+    "openingHours":"Mo-Fr 09:00-18:00",
+    "url":"https://www.instagram.com/jnadvocacia__/"
+  }
+  </script>
+</head>
+
+<body class="font-sans text-adv-dark antialiased selection:bg-adv-gold selection:text-white">
+
+  <header class="fixed top-0 left-0 w-full bg-adv-bg/80 backdrop-blur-md border-b border-adv-border z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+
+      <a href="#" class="flex items-center gap-4 group">
+        <span class="font-serif text-xl tracking-widest text-adv-dark uppercase font-medium">
+          JN <span class="text-adv-gold font-light text-sm tracking-normal normal-case ml-1">Advocacia</span>
+        </span>
+      </a>
+      <nav class="hidden md:flex items-center gap-10 text-xs uppercase tracking-[0.2em] font-medium text-adv-muted">
+        <a href="#servicos" class="hover:text-adv-dark transition duration-300">Serviços</a>
+        <a href="#sobre" class="hover:text-adv-dark transition duration-300">Sobre</a>
+        <a href="#faq" class="hover:text-adv-dark transition duration-300">FAQ</a>
+        <a href="#contato" class="hover:text-adv-dark transition duration-300">Contato</a>
+      </nav>
+
+      <div class="hidden md:block">
+        <a href="https://wa.me/5583987089929?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta."
+           class="inline-block border border-adv-dark px-6 py-3 text-xs uppercase tracking-widest font-semibold hover:bg-adv-dark hover:text-white transition duration-300">
+          Consultar Agora
+        </a>
+      </div>
+
+      <button id="menuBtn" class="md:hidden text-adv-dark focus:outline-none" aria-label="Abrir menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8h16M4 16h16"/></svg>
+      </button>
+    </div>
+
+    <div id="mobileMenu" class="hidden flex-col bg-adv-bg border-b border-adv-border px-6 py-8 space-y-5 md:hidden">
+      <a href="#servicos" class="text-sm uppercase tracking-wider font-medium text-adv-muted">Serviços</a>
+      <a href="#sobre" class="text-sm uppercase tracking-wider font-medium text-adv-muted">Sobre</a>
+      <a href="#faq" class="text-sm uppercase tracking-wider font-medium text-adv-muted">FAQ</a>
+      <a href="#contato" class="text-sm uppercase tracking-wider font-medium text-adv-muted">Contato</a>
+      <a href="https://wa.me/5583987089929?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta."
+         class="block text-center border border-adv-dark py-3 text-xs uppercase tracking-widest font-semibold bg-adv-dark text-white">
+        Consultar agora
+      </a>
+    </div>
+  </header>
+
+  <section class="min-h-screen flex items-center pt-24 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 w-full py-16 grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      
+      <div class="lg:col-span-7 z-10 fade-in">
+        <div class="inline-flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-adv-gold font-semibold mb-6">
+          <span class="w-8 h-[1px] bg-adv-gold"></span> Estratégia Jurídica de Alta Linhagem
+        </div>
+
+        <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl text-adv-dark font-light leading-[1.05] tracking-tight">
+          Defesa jurídica com <span class="italic font-normal text-adv-gold">clareza</span> & presença.
+        </h1>
+
+        <p class="text-base md:text-lg text-adv-muted mt-8 max-w-xl font-light leading-relaxed">
+          Atuação artesanal e minuciosa voltada a corporações e indivíduos que exigem o mais alto nível de segurança, confidencialidade e acompanhamento próximo.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mt-12">
+          <a href="https://wa.me/5583987089929?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta."
+             class="bg-adv-dark text-white px-8 py-4 text-xs uppercase tracking-[0.2em] font-semibold text-center hover:bg-adv-gold transition duration-300">
+            Agendar Atendimento
+          </a>
+          <a href="#servicos" class="group inline-flex items-center justify-center gap-3 text-xs uppercase tracking-[0.2em] font-semibold py-4 hover:text-adv-gold transition duration-300">
+            Áreas de Atuação 
+            <svg class="w-4 h-4 transform group-hover:translate-x-1 transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 relative h-full flex justify-center lg:justify-end fade-in">
+        <div class="relative w-full max-w-md aspect-[3/4] overflow-hidden bg-zinc-100 group">
+          <div class="absolute inset-0 border border-adv-gold m-4 z-10 pointer-events-none transition duration-500 group-hover:m-2"></div>
+          <img
+            src="https://i.ibb.co/Zz68VnZZ/Save-Clip-App-622139818-18069430592426062-885748188211314231-n.jpg"
+            alt="Advogado da JN Advocacia"
+            class="w-full h-full object-cover grayscale hover:grayscale-0 scale-105 hover:scale-100 transition duration-700 ease-out"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-adv-dark/40 via-transparent to-transparent"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="w-full h-[1px] bg-adv-border"></div>
+  </div>
+
+  <section id="servicos" class="py-24 lg:py-32 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center mb-24">
+        
+        <div class="lg:col-span-6 overflow-hidden aspect-[4/3] sm:aspect-[16/9] lg:aspect-[4/5] max-h-[550px] relative fade-in w-full bg-white flex items-center justify-center">
+          <img src="https://i.ibb.co/C3gmN8HG/Pngtree-a-gold-balance-scale-symbolizes-16420712.png" alt="Pngtree-a-gold-balance-scale-symbolizes-16420712" class="w-full h-full object-contain p-4 transition duration-700 ease-out">
+          <div class="absolute inset-0 bg-adv-dark/10 mix-blend-multiply"></div>
+        </div>
+
+        <div class="lg:col-span-6 flex flex-col justify-center fade-in">
+          <div class="text-xs uppercase tracking-[0.3em] text-adv-gold font-semibold mb-4">Soluções Sob Medida</div>
+          
+          <h2 class="font-serif text-4xl md:text-5xl text-adv-dark font-light leading-[1.15] mb-6">
+            Áreas de atuação orientadas à excelência empresarial e individual
+          </h2>
+          
+          <div class="w-12 h-[1px] bg-adv-gold mb-6"></div>
+          
+          <p class="text-adv-muted font-light text-base md:text-lg leading-relaxed max-w-xl">
+            Unimos rigor técnico e visão analítica para antecipar cenários complexos, desenhar estratégias preventivas e blindar de forma intransigente os interesses de nossos constituintes.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 border-t border-l border-adv-border fade-in">
+        
+        <div class="p-8 lg:p-12 border-r border-b border-adv-border hover:bg-white transition duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="font-serif text-xl text-adv-gold mb-8 italic">01 /</div>
+            <h3 class="font-serif text-2xl text-adv-dark font-medium group-hover:text-adv-gold transition duration-300">
+              Direito Empresarial
+            </h3>
+            <p class="text-adv-muted text-sm font-light mt-4 leading-relaxed">
+              Assessoria jurídica corporativa para estruturação de negócios, governança e mitigação estratégica de riscos operacionais.
+            </p>
+          </div>
+          <a href="https://wa.me/5583987089929?text=Olá!%20Tenho%20interesse%20em%20Direito%20Empresarial."
+             class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-adv-dark mt-10 hover:text-adv-gold transition">
+            Iniciar alinhamento <span class="transform group-hover:translate-x-1 transition duration-300">→</span>
+          </a>
+        </div>
+
+        <div class="p-8 lg:p-12 border-r border-b border-adv-border hover:bg-white transition duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="font-serif text-xl text-adv-gold mb-8 italic">02 /</div>
+            <h3 class="font-serif text-2xl text-adv-dark font-medium group-hover:text-adv-gold transition duration-300">
+              Consultoria Contratual
+            </h3>
+            <p class="text-adv-muted text-sm font-light mt-4 leading-relaxed">
+              Desenho, arquitetura e auditoria de contratos complexos nacionais e internacionais sob rígidos padrões de segurança.
+            </p>
+          </div>
+          <a href="https://wa.me/5583987089929?text=Olá!%20Tenho%20interesse%20em%20Consultoria%20Contratual."
+             class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-adv-dark mt-10 hover:text-adv-gold transition">
+            Solicitar parecer <span class="transform group-hover:translate-x-1 transition duration-300">→</span>
+          </a>
+        </div>
+
+        <div class="p-8 lg:p-12 border-r border-b border-adv-border hover:bg-white transition duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="font-serif text-xl text-adv-gold mb-8 italic">03 /</div>
+            <h3 class="font-serif text-2xl text-adv-dark font-medium group-hover:text-adv-gold transition duration-300">
+              Defesa Judicial
+            </h3>
+            <p class="text-adv-muted text-sm font-light mt-4 leading-relaxed">
+              Patrocínio e representação contenciosa de alta complexidade em instâncias estratégicas e tribunais de justiça.
+            </p>
+          </div>
+          <a href="https://wa.me/5583987089929?text=Olá!%20Tenho%20interesse%20em%20Defesa%20Judicial."
+             class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-adv-dark mt-10 hover:text-adv-gold transition">
+            Acionar defesa <span class="transform group-hover:translate-x-1 transition duration-300">→</span>
+          </a>
+        </div>
+
+        <div class="p-8 lg:p-12 border-r border-b border-adv-border hover:bg-white transition duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="font-serif text-xl text-adv-gold mb-8 italic">04 /</div>
+            <h3 class="font-serif text-2xl text-adv-dark font-medium group-hover:text-adv-gold transition duration-300">
+              Mediação e Negociação
+            </h3>
+            <p class="text-adv-muted text-sm font-light mt-4 leading-relaxed">
+              Intermediação de conflitos corporativos inter-sócios e comerciais por vias alternativas com máxima discrição.
+            </p>
+          </div>
+          <a href="https://wa.me/5583987089929?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20Mediação."
+             class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-adv-dark mt-10 hover:text-adv-gold transition">
+            Compor acordo <span class="transform group-hover:translate-x-1 transition duration-300">→</span>
+          </a>
+        </div>
+
+        <div class="p-8 lg:p-12 border-r border-b border-adv-border hover:bg-white transition duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="font-serif text-xl text-adv-gold mb-8 italic">05 /</div>
+            <h3 class="font-serif text-2xl text-adv-dark font-medium group-hover:text-adv-gold transition duration-300">
+              Pareceres Jurídicos
+            </h3>
+            <p class="text-adv-muted text-sm font-light mt-4 leading-relaxed">
+              Estudos técnicos doutrinários voltados a fundamentar tomadas de decisões críticas com alta previsibilidade.
+            </p>
+          </div>
+          <a href="https://wa.me/5583987089929?text=Olá!%20Gostaria%20de%20solicitar%20um%20parecer%20jurídico."
+             class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-adv-dark mt-10 hover:text-adv-gold transition">
+            Requerer análise <span class="transform group-hover:translate-x-1 transition duration-300">→</span>
+          </a>
+        </div>
+
+        <div class="p-8 lg:p-12 border-r border-b border-adv-border hover:bg-white transition duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="font-serif text-xl text-adv-gold mb-8 italic">06 /</div>
+            <h3 class="font-serif text-2xl text-adv-dark font-medium group-hover:text-adv-gold transition duration-300">
+              Atendimento Consultivo
+            </h3>
+            <p class="text-adv-muted text-sm font-light mt-4 leading-relaxed">
+              Disponibilidade permanente de orientação e aconselhamento legal estratégico personalizado para o cotidiano.
+            </p>
+          </div>
+          <a href="https://wa.me/5583987089929?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta."
+             class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-adv-dark mt-10 hover:text-adv-gold transition">
+            Agendar reunião <span class="transform group-hover:translate-x-1 transition duration-300">→</span>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="sobre" class="py-24 lg:py-32 bg-white border-t border-b border-adv-border">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-16 items-center">
+
+      <div class="lg:col-span-6 order-2 lg:order-1 fade-in">
+        <div class="relative w-full aspect-[4/5] bg-zinc-50 overflow-hidden">
+          <img
+            src="https://i.ibb.co/KxSq7rk3/pexels-sora-shimazaki-5668481.jpg"
+            alt="Escritório com acabamento refinado"
+            class="w-full h-full object-cover grayscale brightness-90"
+          >
+        </div>
+      </div>
+
+      <div class="lg:col-span-6 order-1 lg:order-2 fade-in">
+        <div class="text-xs uppercase tracking-[0.3em] text-adv-gold font-semibold mb-4">Valores Institucionais</div>
+        <h2 class="font-serif text-4xl md:text-5xl text-adv-dark font-light leading-tight">
+          A união entre o rigor técnico-jurídico e a proximidade humana.
+        </h2>
+
+        <div class="mt-8 space-y-6 text-adv-muted font-light text-base leading-relaxed">
+          <p>
+            Na <strong>JN Advocacia</strong>, acreditamos que cada cliente necessita de soluções únicas e sob medida. Afastamo-nos do modelo de advocacia massificada para resgatar o cuidado artesanal do direito bem elaborado.
+          </p>
+          <p>
+            Nossa prática é construída sobre bases rígidas de ética, transparência contínua e foco analítico na resolução objetiva de impasses complexos.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12 pt-8 border-t border-adv-border">
+          <div>
+            <h4 class="font-serif text-lg font-medium text-adv-dark">01. Presença Real</h4>
+            <p class="text-xs text-adv-muted font-light mt-1">Contato direto e sem intermediários com o seu advogado especializado.</p>
+          </div>
+          <div>
+            <h4 class="font-serif text-lg font-medium text-adv-dark">02. Alta Estratégia</h4>
+            <p class="text-xs text-adv-muted font-light mt-1">Cada tese é desenhada especificamente para os objetivos traçados.</p>
+          </div>
+          <div>
+            <h4 class="font-serif text-lg font-medium text-adv-dark">03. Linguagem Clara</h4>
+            <p class="text-xs text-adv-muted font-light mt-1">Comunicação descomplicada e transparente sobre o andamento processual.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="faq" class="py-24 lg:py-32">
+    <div class="max-w-4xl mx-auto px-6">
+
+      <div class="text-center fade-in mb-16">
+        <div class="text-xs uppercase tracking-[0.3em] text-adv-gold font-semibold mb-4">Esclarecimentos</div>
+        <h2 class="font-serif text-4xl md:text-5xl text-adv-dark font-light">Perguntas Frequentes</h2>
+      </div>
+
+      <div class="border-t border-adv-border fade-in">
+        
+        <details class="border-b border-adv-border group py-6">
+          <summary class="flex justify-between items-center font-serif text-xl text-adv-dark font-medium list-none outline-none select-none">
+            <span>Como funciona a primeira consulta estratégica?</span>
+            <span class="icon-toggle text-xl font-light text-adv-gold transform transition-transform duration-300">+</span>
+          </summary>
+          <p class="text-adv-muted font-light text-sm mt-4 leading-relaxed max-w-3xl">
+            A consulta inicial serve para mapear exaustivamente o cenário fático apresentado, realizar uma análise preliminar de viabilidade e riscos, e estabelecer as linhas gerais da estratégia jurídica recomendada.
+          </p>
+        </details>
+
+        <details class="border-b border-adv-border group py-6">
+          <summary class="flex justify-between items-center font-serif text-xl text-adv-dark font-medium list-none outline-none select-none">
+            <span>O escritório atende demandas exclusivamente empresariais?</span>
+            <span class="icon-toggle text-xl font-light text-adv-gold transform transition-transform duration-300">+</span>
+          </summary>
+          <p class="text-adv-muted font-light text-sm mt-4 leading-relaxed max-w-3xl">
+            Não. Embora tenhamos uma forte atuação corporativa, oferecemos suporte jurídico de alta qualidade a pessoas físicas que necessitem de representação patrimonial, contratual ou contenciosa sofisticada.
+          </p>
+        </details>
+
+        <details class="border-b border-adv-border group py-6">
+          <summary class="flex justify-between items-center font-serif text-xl text-adv-dark font-medium list-none outline-none select-none">
+            <span>É possível realizar reuniões e atendimentos de forma digital?</span>
+            <span class="icon-toggle text-xl font-light text-adv-gold transform transition-transform duration-300">+</span>
+          </summary>
+          <p class="text-adv-muted font-light text-sm mt-4 leading-relaxed max-w-3xl">
+            Perfeitamente. Disponibilizamos salas de conferência criptografadas e seguras para atender clientes de qualquer região ou que optem pela agilidade e confidencialidade do ambiente online.
+          </p>
+        </details>
+
+        <details class="border-b border-adv-border group py-6">
+          <summary class="flex justify-between items-center font-serif text-xl text-adv-dark font-medium list-none outline-none select-none">
+            <span>Como são estipulados e contratados os honorários advocatícios?</span>
+            <span class="icon-toggle text-xl font-light text-adv-gold transform transition-transform duration-300">+</span>
+          </summary>
+          <p class="text-adv-muted font-light text-sm mt-4 leading-relaxed max-w-3xl">
+            A precificação é baseada na complexidade técnica da causa e no volume de horas estimado para dedicação integral ao projeto. Todos os custos são detalhados de maneira formalizada na proposta de prestação de serviços.
+          </p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="bg-adv-dark text-white py-24 lg:py-32 relative">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="grid lg:grid-cols-12 gap-16 items-start">
+        
+        <div class="lg:col-span-5 fade-in">
+          <div class="text-xs uppercase tracking-[0.3em] text-adv-gold font-semibold mb-4">Canais de Acesso</div>
+          <h2 class="font-serif text-4xl md:text-5xl font-light leading-tight">
+            Inicie um diálogo estratégico com nosso escritório.
+          </h2>
+          <p class="text-zinc-400 font-light mt-6 text-sm leading-relaxed max-w-md">
+            Estamos prontos para analisar o seu caso com a discrição e a profundidade técnica que ele exige. Entre em contato por telefone ou agende uma visita ao nosso escritório.
+          </p>
+
+          <div class="mt-10">
+            <a href="https://wa.me/5583987089929?text=Olá!%20Gostaria%20de%20conversar%20sobre%20uma%20consulta."
+               class="inline-block border border-adv-gold text-adv-gold px-8 py-4 text-xs uppercase tracking-[0.2em] font-semibold hover:bg-adv-gold hover:text-adv-dark transition duration-300">
+              Conectar via WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 grid sm:grid-cols-2 gap-8 lg:gap-12 fade-in">
+          <div class="border-t border-zinc-800 pt-6">
+            <h3 class="font-serif text-lg text-adv-gold font-medium">Sede Institucional</h3>
+            <p class="text-zinc-400 font-light text-sm mt-3 leading-relaxed">
+              Av. Amazonas, 290<br>
+              Bairro dos Estados<br>
+              João Pessoa — PB<br>
+              CEP 58030-140
+            </p>
+          </div>
+
+          <div class="border-t border-zinc-800 pt-6">
+            <h3 class="font-serif text-lg text-adv-gold font-medium">Horário de Expediente</h3>
+            <p class="text-zinc-400 font-light text-sm mt-3 leading-relaxed">
+              Segunda a Sexta-feira<br>
+              Das 09h às 18h<br>
+              <span class="text-adv-gold italic text-xs mt-1 block">Atendimento sob prévio agendamento.</span>
+            </p>
+          </div>
+
+          <div class="border-t border-zinc-800 pt-6">
+            <h3 class="font-serif text-lg text-adv-gold font-medium">Canais Diretos</h3>
+            <p class="text-zinc-400 font-light text-sm mt-3 leading-relaxed">
+              Telefone: (83) 98708-9929<br>
+              Instagram: @jnadvocacia__
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-20 filter grayscale invert contrast-[1.1] opacity-70 border border-zinc-800 rounded-none overflow-hidden fade-in">
+        <a href="https://maps.google.com" target="_blank" class="block relative group">
+          <iframe
+            src="about:blank"
+            id="mapIframe"
+            width="100%"
+            height="350"
+            style="border:0; pointer-events:none;"
+            loading="lazy">
+          </iframe>
+          <div class="absolute inset-0 bg-adv-dark/20 group-hover:bg-transparent transition duration-300 flex items-center justify-center">
+            <div class="bg-white text-adv-dark px-6 py-3 text-xs uppercase tracking-widest font-semibold shadow-2xl">
+              Expandir Mapa de Localização
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="bg-[#070B14] text-zinc-500 py-12 text-xs border-t border-zinc-900">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+      
+      <div class="flex items-center gap-4">
+        <span class="font-serif text-sm tracking-widest uppercase text-zinc-400 font-medium">JN Advocacia</span>
+        <span class="w-[1px] h-4 bg-zinc-800 hidden md:block"></span>
+        <p class="font-light">© <span id="year"></span> Todos os direitos reservados.</p>
+      </div>
+
+      <div class="flex items-center gap-8 font-medium uppercase tracking-wider text-[10px]">
+        <a href="#servicos" class="hover:text-white transition">Serviços</a>
+        <a href="#sobre" class="hover:text-white transition">Sobre</a>
+        <a href="#contato" class="hover:text-white transition">Contato</a>
+      </div>
+
+      <div class="font-light tracking-wide text-zinc-600">
+        Design Exclusivo & Editorial
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('flex');
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.fade-in').forEach(el => {
+      observer.observe(el);
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.getElementById('mapIframe').srcdoc = `
+      <style>body{margin:0;background:#111;display:flex;justify-content:center;align-items:center;color:#666;font-family:sans-serif;font-size:14px;letter-spacing:1px;}</style>
+      <div>[ Mapa Institucional — Av. Amazonas, 290, João Pessoa ]</div>
+    `;
+  </script>
+
+</body>
+</html>
